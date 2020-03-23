@@ -35,31 +35,59 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="bookname">Book Name</label>
-                    <input type="text" class="form-control" id="bookname" placeholder="Find Book Name">
+                    <select id="bookname" class="form-control">
+                      <option value="">Search Book Name</option>
+                      <?php
+                      include 'config/normal.php';
+                      $sql = "SELECT * FROM book WHERE statusbook = 'Published'";
+                      $result = $conn->query($sql);
+                      if ($result->num_rows > 0) {
+                          // output data of each row
+                          while($row = $result->fetch_assoc()) {
+                              ?>
+                              <option value="<?php echo $row['id']; ?>"><?php echo $row['bookname']; ?></option>
+                              <?php
+                          }
+                      }
+                      $conn->close();
+                      ?>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label for="author">Author</label>
                     <input type="text" class="form-control" id="author" placeholder="Author" readonly>
                   </div>
                   <div class="form-group">
-                    <label for="author">Serial Number</label>
-                    <input type="text" class="form-control" id="author" placeholder="Serial Number" readonly>
+                    <label for="serialnumber">Serial Number</label>
+                    <input type="text" class="form-control" id="serialnumber" placeholder="Serial Number" readonly>
                   </div>
                   <div class="form-group">
-                    <label for="author">Date of Published</label>
-                    <input type="date" class="form-control" id="author" placeholder="Date of Published" readonly>
+                    <label for="dateofpublished">Date of Published</label>
+                    <input type="text" class="form-control" id="dateofpublished" placeholder="Date of Published" readonly>
                   </div>
                   <div class="form-group">
-                    <label for="author">Rack Number</label>
-                    <input type="text" class="form-control" id="author" placeholder="Rack Number" readonly>
+                    <label for="racknumber">Rack Number</label>
+                    <input type="text" class="form-control" id="racknumber" placeholder="Rack Number" readonly>
                   </div>
                   <div class="form-group">
-                    <label for="author">Date Loan</label>
-                    <input type="date" class="form-control" id="author" placeholder="Date Loan" readonly>
+                    <label for="quantity">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" placeholder="Quantity" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="quantityloan">Quantity Loan</label>
+                    <input type="number" class="form-control" id="quantityloan" placeholder="Quantity Loan" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="statusbook">Status Book</label>
+                    <input type="text" class="form-control" id="statusbook" placeholder="Status Book" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="dateloan">Date Loan</label>
+                    <input type="text" class="form-control" id="dateloan" placeholder="Date Loan" value="<?php echo date("d-m-Y"); ?>" readonly>
                   </div>
                   <div class="form-group">
                     <label for="author">Date Return</label>
-                    <input type="date" class="form-control" id="author" placeholder="Date Return<" readonly>
+                    <input type="text" class="form-control" id="datereturn" placeholder="Date Return" value="<?php  ?>" readonly>
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -82,11 +110,4 @@
 
 <?php include 'footer.php'; ?>
 
-<script type="text/javascript">
-$(function () {
-    //Initialize Select2 Elements
-    $('#bookname').select2({
-      theme: 'bootstrap4'
-    });
-}); 
-</script>
+<script type="text/javascript" src="javascript/newrequest.js"></script>

@@ -23,9 +23,9 @@
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
-        <div class="row">
+<!--         <div class="row">
           <div class="col-md-6">
-            <!-- small box -->
+             small box
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>0</h3>
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <!-- small box -->
+            small box
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>0</h3>
@@ -50,30 +50,31 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- /.row -->
         <!-- Info boxes -->
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3">
+          <!-- <div class="col-12 col-sm-6 col-md-3"> -->
+          <div class="col-md-6">
             <div class="info-box">
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Total Book</span>
-                <span class="info-box-number">0</span>
+                <span class="info-box-text">Book</span>
+                <span class="info-box-number" id="totalbook">0</span>
               </div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-md-6">
             <div class="info-box mb-3">
               <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Total Loan</span>
-                <span class="info-box-number">0</span>
+                <span class="info-box-text">Loan</span>
+                <span class="info-box-number" id="totalloan">0</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -82,28 +83,28 @@
           <!-- /.col -->
 
           <!-- fix for small devices only -->
-          <div class="clearfix hidden-md-up"></div>
-
-          <div class="col-12 col-sm-6 col-md-3">
+        </div>
+        <div class="row">
+          <div class="col-md-6">
             <div class="info-box mb-3">
               <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Total Pending Return</span>
-                <span class="info-box-number">0</span>
+                <span class="info-box-text">Pending Return</span>
+                <span class="info-box-number" id="totalpending">0</span>
               </div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-md-6">
             <div class="info-box mb-3">
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Total Members</span>
-                <span class="info-box-number">0</span>
+                <span class="info-box-text">Members</span>
+                <span class="info-box-number" id="totalmembers">0</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -232,3 +233,4 @@
 
 
 <?php include 'footer.php'; ?>
+<script type="text/javascript" src="javascript/home.js"></script>

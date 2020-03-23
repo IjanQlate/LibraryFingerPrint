@@ -30,8 +30,10 @@
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-</head>
+  <?php
+  date_default_timezone_set("Asia/Kuala_Lumpur");
+  ?>
+</head> 
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">

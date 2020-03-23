@@ -36,6 +36,8 @@
 <script src="../plugins/toastr/toastr.min.js"></script>
 <!-- bootstrap color picker -->
 <script src="../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<!-- Moment JS -->
+<script src="../plugins/moment/moment.min.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 

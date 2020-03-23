@@ -1,7 +1,7 @@
 <?php 
 include 'config/database.php'; 
 include 'header.php'; 
-
+include 'modal/modal_book.php';
 ?>
 
   <!-- Content Wrapper. Contains page content -->
@@ -37,13 +37,16 @@ include 'header.php';
                 <thead>
                 <tr>
                   <th>Id</th>
-                  <th>No</th>
                   <th>Book Name</th>
                   <th>Author</th>
+                  <th>Serial Number</th>
+                  <th>Published</th>
+                  <th>Rack Number</th>
                   <th>Quantity</th>
                   <th>Quantity Loan</th>
                   <th>Status</th>
                   <th>Update By</th>
+                  <th>Last Update</th>
                 </tr>
                 </thead>
               </table>
@@ -52,9 +55,6 @@ include 'header.php';
         </div>
       </div>
     </section>
-
-
-
 
   </div>
   <!-- /.content-wrapper -->
